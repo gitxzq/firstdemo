@@ -1,12 +1,25 @@
 #coding=utf-8
 
 from selenium import webdriver
+import unittest
 
-driver=webdriver.Firefox()
-driver.get('http://localhost:8000')
-try:
-	assert 'Django' in driver.title	
-except AssertionError:
-	print ('AssertionError')
-	# pass
-driver.close()
+class test_selenium(unittest.TestCase):
+	"""docstring for ClassName"""
+	def setUp(self):
+		self.driver=webdriver.Firefox()
+		self.driver.implicitly_wait(3)
+
+	def tearDown(self):
+		self.driver.quit()
+
+
+	def test_app(self):
+
+		self.driver.get('localhost:8000')
+
+		self.assertIn('Tod',self.driver.title)
+
+		self.fail('finish the test')
+
+if __name__=='__main__':
+	unittest.main()
