@@ -17,7 +17,7 @@ class test_selenium(unittest.TestCase):
 
 		# self.fail('finish the test')
 	def tearDown(self):
-		print '222'
+		
 		self.driver.quit()
 
 if __name__=='__main__':
