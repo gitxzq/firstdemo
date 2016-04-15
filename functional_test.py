@@ -17,9 +17,9 @@ class test_selenium(unittest.TestCase):
 
 		self.driver.get('localhost:8000')
 
-		self.assertIn('Tod',self.driver.title)
+		self.assertIn('To-D',self.driver.title)
 
-		self.fail('finish the test')
+		# self.fail('finish the test')
 
 if __name__=='__main__':
 	unittest.main()
