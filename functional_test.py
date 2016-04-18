@@ -9,6 +9,7 @@ class test_selenium(unittest.TestCase):
 	def setUp(self):
 		self.driver=webdriver.Firefox()
 		self.driver.implicitly_wait(3)
+
 	def test_app(self):
 
 		self.driver.get('localhost:8000')
@@ -27,10 +28,6 @@ class test_selenium(unittest.TestCase):
 		# table=self.driver.find_element_by_id('id_list_table')
 		# rows=self.driver.find_elements_by_tag_name('tr')
 		# self.assertTrue(any(row.text=='1:Buy peacock feathers' for row in rows))
-
-
-
-
 
 	def tearDown(self):
 		self.driver.quit()	
