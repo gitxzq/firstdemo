@@ -2,6 +2,7 @@
 
 from selenium import webdriver
 import unittest
+import time
 
 class test_selenium(unittest.TestCase):
 	"""docstring for ClassName"""
@@ -12,6 +13,7 @@ class test_selenium(unittest.TestCase):
 	def test_app(self):
 
 		self.driver.get('localhost:8000')
+		time.sleep(5)
 
 		# self.assertIn('To-D',self.driver.title)
 
