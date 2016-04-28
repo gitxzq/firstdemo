@@ -4,8 +4,13 @@
     </head>
     <body>
         <h1>Your To-D list</h1>
-        <input id='id_new_item' placeholder="Enter a To-D item" />
-        <table id='id_list_table'></table>
+        <form method="POST">
+       		 <input name="item_text" id='id_new_item' placeholder="Enter a To-D item" />
+        	{% csrf_token %}
+        </form>
+        <table id='id_list_table'>
+        	<tr><td>{{new_item_text}}</td></tr>
+        </table>
 
     </body>
 
